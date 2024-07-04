@@ -19,12 +19,9 @@ const submitHandler = async (event) => {
   try {
       const response = await axios.post('https://ecommerce-drab-beta.vercel.app/api/v1/sendmail', data, {
           headers: {
-              "Access-Control-Allow-Origin": "*",
-              "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
               'Content-Type': 'application/json'
           },
           withCredentials: true
-          
       });
       console.log('Response:', response.data);
   } catch (error) {
